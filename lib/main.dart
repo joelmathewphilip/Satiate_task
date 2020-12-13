@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:satiate_task/custom_animation.dart';
+import 'doctor/doctor_profile.dart';
 import 'package:satiate_task/index.dart';
+import 'package:satiate_task/main_page/specialities.dart';
+import 'package:satiate_task/main_page/symptoms.dart';
+import 'package:satiate_task/ocr_detect_medicine/detect_medicine.dart';
 import 'package:satiate_task/order_medicine.dart';
 import 'package:satiate_task/profile_page.dart';
 import 'package:satiate_task/request_call_back.dart';
-import 'package:satiate_task/main_page.dart';
+import 'package:satiate_task/main_page/main_page.dart';
 import 'package:satiate_task/splash_screen.dart';
 import 'choose_best_doctor.dart';
-import 'calendar.dart';
+import 'calendar/calendar.dart';
 import 'sign_in.dart';
 import 'package:flutter/services.dart';
 import 'register.dart';
-//import 'smart_booking_system.dart';
-//import 'find_trusted_doctor.dart';
 import 'select_location.dart';
 import 'verify_number.dart';
 import 'package:satiate_task/WantToVerifyNumber.dart';
@@ -35,7 +38,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: SplashScreen(),
+      home:Custom_Animation(),
     );
   }
 }

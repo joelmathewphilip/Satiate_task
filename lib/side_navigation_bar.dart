@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:satiate_task/calendar.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:satiate_task/About_The_App/terms_and_conditions.dart';
+import 'package:satiate_task/calendar/calendar.dart';
+import 'package:satiate_task/order_medicine.dart';
+import 'package:satiate_task/About_The_App/About_The_App.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Side_Navigation_bar extends StatelessWidget {
   @override
@@ -67,10 +72,7 @@ class Side_Navigation_bar extends StatelessWidget {
                     title: Text('Consult Now'),
                     onTap: ()
                     {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Calendar()),
-                      );
+
                     },
                     leading: Icon(Icons.person_outline),
                   ),
@@ -83,6 +85,13 @@ class Side_Navigation_bar extends StatelessWidget {
                     leading: Icon(Icons.report),
                   ),
                   ListTile(
+                    onTap: ()
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Order_Medicine()),
+                      );
+                    },
                     title: Text('Order Medicines'),
                     leading: Icon(Icons.medical_services),
                   ),
@@ -147,15 +156,42 @@ class Side_Navigation_bar extends StatelessWidget {
                 tiles: [
                   ListTile(
                     title: Text('About The App'),
+                    onTap:()
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => About_The_App()),
+                      );
+                    },
                     leading: Icon(Icons.person_outline),
                   ),
                   ListTile(
                     title: Text('Terms and Conditions'),
                     leading: Icon(Icons.local_hospital),
+                    onTap: ()
+                    {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Terms_And_Conditions()),
+                      );
+                    },
                   ),
                   ListTile(
                     title: Text('Privacy Policy'),
                     leading: Icon(Icons.report),
+                    onTap: ()
+                    {
+                      launch('https://www.lipsum.com/privacy.pdf');
+                      Fluttertoast.showToast(
+                          msg: "Opening Browser",
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.CENTER,
+                          timeInSecForIosWeb: 1,
+                          backgroundColor: Colors.green,
+                          textColor: Colors.white,
+                          fontSize: 16.0
+                      );
+                    },
                   ),
                   ListTile(
                     title: Text('Help'),

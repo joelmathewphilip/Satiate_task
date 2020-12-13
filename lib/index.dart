@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:satiate_task/order_medicine.dart';
 import 'package:satiate_task/profile_page.dart';
 import 'package:satiate_task/request_call_back.dart';
-import 'package:satiate_task/main_page.dart';
+import 'file:///C:/Users/hp/AndroidStudioProjects/satiate_task/lib/main_page/main_page.dart';
 class Index_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
